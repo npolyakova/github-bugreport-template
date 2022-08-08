@@ -31,7 +31,7 @@ body:
       label: Steps to reproduce
       description: Also tell us, how did you detected the bug?
       placeholder:
-        1. Go to ... /n
+        1. Go to ... |
         2. Click to the button...
     validations:
       required: true
