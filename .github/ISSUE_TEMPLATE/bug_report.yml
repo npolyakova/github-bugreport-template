@@ -40,4 +40,4 @@ body:
     attributes:
       label: Evidencies
       description: Please paste any relevant screenshot or video with bug reproducing.
-      render: shell
+      placeholder: Paste here your screenshots or video
