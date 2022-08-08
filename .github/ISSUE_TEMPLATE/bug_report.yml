@@ -28,9 +28,9 @@ body:
   - type: textarea
     id: steps
     attributes:
-      label: Steps to reproduce:
+      label: Steps to reproduce
       description: Also tell us, how did you detected the bug?
-      placeholder:
+      placeholder: |
         1. Go to ... 
         2. Click to the button...
     validations:
