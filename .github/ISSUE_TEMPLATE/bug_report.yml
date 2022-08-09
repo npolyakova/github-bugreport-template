@@ -1,8 +1,9 @@
+id: "1"
+
 name: Bug Report
 description: File a bug report
 title: "[Enter bug title] [release]"
 labels: ["bug", "triage"]
-id: "1"
 assignees:
   - npolly
 body:
