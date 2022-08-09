@@ -1,5 +1,3 @@
-id: "1"
-
 name: Bug Report
 description: File a bug report
 title: "[Enter bug title] [release]"
@@ -19,7 +17,6 @@ body:
       options:
         - Allure TestOps
         - Allure plugin
-        - {{id}}
     validations:
       required: true
   - type: input
@@ -35,7 +32,8 @@ body:
       description: Also tell us, how did you detected the bug?
       value: |
         1. Go to ...
-        2. Click to the button...
+        2. Click to the button... 
+        3. {{id}}
     validations:
       required: true
   - type: textarea
