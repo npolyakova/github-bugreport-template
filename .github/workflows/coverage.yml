@@ -1,26 +1,20 @@
-name: Coverage Diff
-
-on:
-  push:
-    branches:
-      - master
-      - main
-  pull_request: {}
+name: Tests
+on: [pull_request]
 
 jobs:
-  test:
-    name: Coverage Diff
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v1
+
+      - name: Test
+        run: npm test
+
+      - name: Monitor coverage
+        uses: slavcodev/coverage-monitor-action@v1
         with:
-          node-version: 16
-          cache: npm
-      - run: npm install
-      - run: npm run test
-      - name: Coverage Diff
-        uses: greatwizard/coverage-diff-action@v1
-        with:
-          github-token: ${{ secrets.TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
+          coverage_path: "logs/clover.xml"
+          threshold_alert: 10
+          threshold_warning: 50
+          threshold_metric: "lines"
